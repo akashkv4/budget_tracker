@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/recordFragment">
+
+    <fragment
+        android:id="@+id/recordFragment"
+        android:name="com.test.budgettracker.presentation.RecordFragment"
+        android:label="Record">
+
+        <action
+            android:id="@+id/action_recordFragment_to_createRecordFragment"
+            app:destination="@id/createRecordFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            >
+
+            <argument
+                android:name="createOrEdit"
+                app:argType="com.test.budgettracker.presentation.CreateOrEdit" />
+
+            <argument
+                android:name="expense"
+                app:nullable="true"
+                app:argType="com.test.budgettracker.data.model.Expense" />
+
+        </action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/chartFragment"
+        android:name="com.test.budgettracker.presentation.ChartFragment"
+        android:label="Chart" >
+        <action
+            android:id="@+id/action_chartFragment_to_editMonthlyBudgetFragment"
+            app:destination="@id/editMonthlyBudgetFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createRecordFragment"
+        android:name="com.test.budgettracker.presentation.CreateRecordFragment"
+        android:label="Create Record">
+
+        <argument
+            android:name="createOrEdit"
+            app:argType="com.test.budgettracker.presentation.CreateOrEdit" />
+        <argument
+            android:name="expense"
+            app:nullable="true"
+            app:argType="com.test.budgettracker.data.model.Expense" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/editMonthlyBudgetFragment"
+        android:name="com.test.budgettracker.presentation.EditMonthlyBudgetFragment"
+        android:label="Create Record">
+
+
+
+    </fragment>
+
+</navigation>
