@@ -28,7 +28,7 @@ Architecture:
 * Separation of concerns handled with data,domain,presentation layers
 * Hilt is used for dependency injection
 * Room is used for database
-* Use cases are used to encapsulate specific business logic, ensuring clear separation of concern
+* Use cases used to encapsulate specific business logic, ensuring clear separation of concern
 * Repository layer written for LocalDataSource , also leave space for RemoteDataSource which 
   can be used in the future
 
